@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+header {
+    background-color: #154734; /* Baylor green */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+header img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+h2, h3 {
+    color: #154734;
+    margin-top: 0;
+}
+nav {
+    background-color: #FFB81C; /* Baylor gold */
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+nav a {
+    color: #154734;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: white;
+}
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.post, .prayer-request, .team-member {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.post:hover, .prayer-request:hover, .team-member:hover {
+    transform: translateY(-5px);
+}
+.post img, .team-member img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.post .content, .team-member .content {
+    flex: 1;
+    min-width: 200px;
+}
+.post p.meta, .prayer-request p.meta, .team-member p.meta {
+    color: #666;
+    font-style: italic;
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.gallery img:hover {
+    opacity: 0.9;
+}
+.legacy {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #154734;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+@media (max-width: 600px) {
+    h1 { font-size: 1.8em; }
+    nav a { margin: 0 10px; font-size: 1em; }
+    .container { padding: 0 10px; }
+    .gallery img, .post img, .team-member img { max-width: 100%; height: 150px; }
+}
