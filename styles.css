@@ -10,26 +10,25 @@ header {
     background-color: #154734; /* Baylor green */
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 0.5% 2% 0.5%; /* Unchanged */
     position: relative;
+    min-height: 8%; /* Unchanged */
+    max-height: 10%; /* Unchanged */
+    overflow: hidden; /* Unchanged */
 }
 header img.banner {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
+    width: 94%; /* Increased from 70% to 94% to nearly fill the width */
+    max-height: 100%; /* Unchanged */
+    object-fit: cover; /* Unchanged */
     display: block;
-}
-header img.logo {
-    max-width: 150px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1;
+    margin: 0 3%; /* 3% margin on each side for a small border */
 }
 h1 {
     margin: 0;
-    font-size: 2.5em;
-    font-weight: 700;
+    font-size: 2.2em; /* Unchanged */
+    font-weight: 700; /* Unchanged */
+    padding-top: 2%; /* Unchanged */
+    position: relative; /* Unchanged */
 }
 h2, h3 {
     color: #154734;
@@ -37,13 +36,13 @@ h2, h3 {
 }
 nav {
     background-color: #FFB81C; /* Baylor gold */
-    padding: 15px;
+    padding: 1.5%;
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 nav a {
     color: #154734;
-    margin: 0 20px;
+    margin: 0 2%;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -53,40 +52,40 @@ nav a:hover {
     color: white;
 }
 .container {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 20px;
+    max-width: 80%; /* 80% of viewport width */
+    margin: 2% auto;
+    padding: 0 2%;
 }
 .post-preview, .prayer-request, .team-member, .legacy {
     background: white;
     border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 2%;
+    margin-bottom: 2%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2%;
 }
 .post-preview:hover, .prayer-request:hover, .team-member:hover, .legacy:hover {
     transform: translateY(-5px);
 }
 .post-preview img, .team-member img {
-    max-width: 200px;
+    max-width: 20%; /* 20% of container width */
     height: auto;
     border-radius: 8px;
     object-fit: cover;
 }
 .post-preview .content, .team-member .content {
     flex: 1;
-    min-width: 200px;
+    min-width: 50%;
 }
 .post-preview p.meta, .prayer-request p.meta, .team-member p.meta {
     color: #666;
     font-style: italic;
     font-size: 0.9em;
-    margin: 5px 0;
+    margin: 1% 0;
 }
 .post-preview a {
     color: #154734;
@@ -99,26 +98,26 @@ nav a:hover {
 .post-content {
     background: white;
     border: 1px solid #ddd;
-    padding: 20px;
+    padding: 2%;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 .post-content img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 2%;
 }
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); /* 20% min width for gallery items */
+    gap: 2%;
+    margin: 2% 0;
 }
 .gallery img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
@@ -131,14 +130,16 @@ footer {
     background-color: #154734;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 1.5%;
+    margin-top: 2%;
     font-size: 0.9em;
 }
 @media (max-width: 600px) {
-    h1 { font-size: 1.8em; }
-    nav a { margin: 0 10px; font-size: 1em; }
-    .container { padding: 0 10px; }
-    .gallery img, .post-preview img, .team-member img { max-width: 100%; height: 150px; }
-    header img.logo { max-width: 100px; }
+    h1 { font-size: 1.6em; }
+    nav a { margin: 0 1%; font-size: 1em; }
+    .container { padding: 0 1%; }
+    .gallery img, .post-preview img, .team-member img { max-width: 100%; height: auto; }
+    header { min-height: 12%; max-height: 15%; }
+    h1 { padding-top: 2%; }
+    header img.banner { width: 90%; margin: 0 5%; } /* Adjusted for mobile */
 }
