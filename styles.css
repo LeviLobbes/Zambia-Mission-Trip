@@ -17,11 +17,11 @@ header {
     overflow: hidden; /* Unchanged */
 }
 header img.banner {
-    width: 94%; /* Increased from 70% to 94% to nearly fill the width */
-    max-height: 100%; /* Unchanged */
-    object-fit: cover; /* Unchanged */
+    width: 94%; /* Unchanged */
+    max-height: 100%; /* Ensures it fits within header height */
+    object-fit: cover; /* Crops and scales the image to fill while preserving aspect ratio */
     display: block;
-    margin: 0 3%; /* 3% margin on each side for a small border */
+    margin: 0 3%; /* Unchanged */
 }
 h1 {
     margin: 0;
@@ -141,5 +141,5 @@ footer {
     .gallery img, .post-preview img, .team-member img { max-width: 100%; height: auto; }
     header { min-height: 12%; max-height: 15%; }
     h1 { padding-top: 2%; }
-    header img.banner { width: 90%; margin: 0 5%; } /* Adjusted for mobile */
+    header img.banner { width: 90%; margin: 0 5%; }
 }
