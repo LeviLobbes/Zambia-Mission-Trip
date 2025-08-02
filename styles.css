@@ -60,9 +60,18 @@ nav a:hover {
 }
 
 .container {
-    max-width: 90%;
-    margin: 2% auto;
-    padding: 0;
+    max-width: 900px;            /* Keeps content from being too wide */
+    margin-left: auto;           /* Centers container horizontally */
+    margin-right: auto;
+    margin-top: 2rem;            /* Top margin */
+    margin-bottom: 2rem;         /* Bottom margin */
+    padding-left: 2rem;          /* Space inside on the left */
+    padding-right: 2rem;         /* Space inside on the right */
+    padding-top: 1rem;           /* Optional: space at top */
+    padding-bottom: 1rem;        /* Optional: space at bottom */
+    background: #fff;            /* Optional: white background */
+    border-radius: 16px;         /* Optional: rounded corners */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);  /* Optional: subtle shadow */
 }
 
 /* Blog List Styles */
@@ -87,7 +96,7 @@ nav a:hover {
 }
 .blog-list-image {
     width: 100%;
-    height: 200px;
+    height: 300px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 1rem;
